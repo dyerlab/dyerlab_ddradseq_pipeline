@@ -1,2 +1,5 @@
-# dyerlab_ddradseq_pipeline
-Development of our pipeline for working with ddRadSEQ data in the lab.
+# Dyerlab ddRADSeq Pipeline
+
+This repository is for the anlaysis of ddRADSeq data, the analytical pipelines used, and documentation.
+
+
