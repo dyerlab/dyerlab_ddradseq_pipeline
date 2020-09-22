@@ -1,4 +1,4 @@
-# Raw Data
+# PW Raw Data 
 
 There are a few data sets that we can work with.  Here is one from Mathew DeSaix's thesis on Migratory Connectivity in the Prothonotary Warbler.  These fasta files are located on the VCU Google Drive and you'll need to be logged into your school google account to access them.
 
