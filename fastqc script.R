@@ -26,7 +26,7 @@ fastqc(fq.dir = fastqDir,
        qc.dir = qcDir,
        threads = 1)
 
-#### ^^^ You'll get an error on Windows machines from the above script 
+### ^^^ You'll get an error on Windows machines from the above script 
 #if you are not running R on a Linux subsystem, you can get around this
 #by enabling use of your Linux subsystem on Windows 10 and above machines,
 #and installing Ubuntu, installing R in Ubuntu, and running this script 
