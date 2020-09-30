@@ -53,5 +53,21 @@ fastqc(fq.dir = fastqDir,
 
 ###Install R
 
-#Still working on figuring this out, you can only install up to R 3.5 on Ubuntu and
-#I'm not sure if the fastqcr package will run on 3.5
+# sudo apt install r-base
+
+###Run R
+
+# R
+
+###Run initial R script on R in Ubuntu
+
+install.packages("fastqcr")
+library("fastqcr")
+setwd("D:/BNFO 508/data")
+
+fastqDir <- "D:/BNFO 508/data/PROW Raw Reads"
+qcDir <- "D:/BNFO 508/data/PROW fastqc Results"
+
+fastqc(fq.dir = fastqDir,
+       qc.dir = qcDir,
+       threads = 1)
