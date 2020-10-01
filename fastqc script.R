@@ -22,6 +22,9 @@ library("fastqcr")
 fastqDir <- "D:/BNFO 508/data/PROW Raw Reads"
 qcDir <- "D:/BNFO 508/data/PROW fastqc Results"
 
+#I elected to only use one thread because I am doing the fastqc checks on my
+#laptop for now
+
 fastqc(fq.dir = fastqDir,
        qc.dir = qcDir,
        threads = 1)
@@ -37,27 +40,42 @@ fastqc(fq.dir = fastqDir,
 
 
 
-###Enter the below script into Ubuntu to install R to your Windows subsystem.
+###Enter the below script (still can't get it to work though) into Ubuntu 
+#to install R to your Windows subsystem.
 
 ###Install APT and update packages for Ubuntu, APT is a package manager that
 ###allows you to install software like R to Ubuntu.
 
 # sudo apt update
+
 # sudo apt install emacs unzip
-
-#enter Y to continue
-
-# Y
 
 
 
 ###Install R
 
+# sudo apt install dirmngr gnupg apt-transport-https ca-certificates software-properties-common
+
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+
+# sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/'
+
 # sudo apt install r-base
+
+
+
+###Install the build-essential package for Ubuntu (necessary for installing packages
+#to R in Ubuntu)
+
+# sudo apt install build-essential
+
+
 
 ###Run R
 
 # R
+
+
 
 ###Run initial R script on R in Ubuntu
 
