@@ -18,5 +18,8 @@ make
 
 ### Upload multiplexed read files to server using sftp client.
 
+#De-multiplex fastq files and trim to 60bp using the process_radtags function in Stacks.
+
+ 
 
 
