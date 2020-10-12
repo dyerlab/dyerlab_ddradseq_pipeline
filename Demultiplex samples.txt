@@ -1,0 +1,22 @@
+### Create Godel Cluster account at https://chipc.vcu.edu/research/account-creation/
+
+### Instructions for connecting to Godel should be included in the email to your VCU email when your
+### account is created.
+
+### Connect to cluster with ssh client.
+
+#Set gcc to version 7 (which supports c++11 compiling which Stacks requires)
+source /opt/rh/devtoolset-7/enable
+
+### Download stacks and upload to server using sftp client https://catchenlab.life.illinois.edu/stacks/manual/
+
+#Install stacks
+tar xfvz stacks-2.54.tar.gz
+cd stacks-2.54
+./configure
+make
+
+### Upload multiplexed read files to server using sftp client.
+
+
+
