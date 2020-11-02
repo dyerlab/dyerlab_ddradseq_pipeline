@@ -3,22 +3,73 @@
 ### Instructions for connecting to Godel should be included in the email to your VCU email when your
 ### account is created.
 
-### Connect to cluster with ssh client.
-
-#Set gcc to version 7 (which supports c++11 compiling which Stacks requires)
-source /opt/rh/devtoolset-7/enable
+### Connect to Godel with ssh client.
 
 ### Download stacks and upload to server using sftp client https://catchenlab.life.illinois.edu/stacks/manual/
 
-#Install stacks
+### Upload multiplexed raw reads files and barcode file to server using sftp client.  Put them all raw reads files in the 
+### same directory and create separate directories for the barcode file and your output files.  Put put all three directories 
+### in the same master directory, in this example the directory will be named PROW_reads
+
+#				In this example I use raw, samples, and barcodes as the respective directory names for the raw read, output,
+#				and barcode files.
+
+#				Make sure that the barcode file format matches the format used by the process_radtags function in Stacks, a tab delimited
+#				file consistin of the barcodes in the first column and sample name in the second.  If you need to edit the barcode file you
+#				can do so in Excel.  Save the new edited barcode file as a tab delimited text file and then rename the file to remove the .txt
+#				file extension before uploading to server.
+
+#				ex:
+#				AACGCCAAC	30_05
+#				TCGCGACCAAC	10_11
+#				TCTGGCAAC	32_07
+#				GTTGGCCAAC	18_09
+#				CCAGAACCAAC	17_09
+#				CGGTCCAAC	04_07
+#				AGGTACCAAC	31_11
+#				AGGTAACCAAC	30_07
+#				CTCAGCAAC	26_09
+#				TGAAGCCAAC	32_09
+
+
+
+
+
+##### Script
+
+# key:
+# <~~~~~>: place holder for user input, text between brackets gives instructions as to what the input should be
+# *: footnote, further clarification written in a note below this line of script
+
+
+
+# log in to open node
+qrsh
+
+# Set gcc to version 7 (which supports c++11 compiling which Stacks requires)
+source /opt/rh/devtoolset-7/enable
+
+# Add gcc 7.0 to path. Stacks requires a c++11 compatible compiler and older gcc versions are not c++11 compatible.
+source /opt/rh/devtoolset-7/enable
+
+# Install Stacks
 tar xfvz stacks-2.54.tar.gz
 cd stacks-2.54
-./configure
+source ./configure
 make
 
-### Upload multiplexed read files to server using sftp client.
+# Set working directory
+cd <working directory filepath, PROW_reads in this case>
 
-#De-multiplex fastq files and trim to 60bp using the process_radtags function in Stacks.
+# De-multiplex fastq files and trim to 60bp using the process_radtags function in Stacks.
+<process_radtags file path*> -p .<raw reads file path, /raw in this case> -b 
+.<barcodes file path, /barcodes/barcodes in this case> -o .<output files file path, /samples in this case> 
+-c -q -r --renz_1 ecoRI** --renz_2 mseI**
+
+*process_radtags filepath should be /gpfs_fs/<godel user>/stacks-2.54/process_radtags
+
+**make sure you set your restriction enzymes to the ones used in your particular case
+
 
  
 
