@@ -62,7 +62,7 @@ make
 cd <working directory filepath, PROW_reads in this case>
 
 # De-multiplex fastq files and trim to 60bp using the process_radtags function in Stacks.
-<process_radtags file path*> -p .<raw reads file path, /raw in this case> -b 
+<process_radtags file path*> -p .<raw reads file path, /unzipped in this case> -b 
 .<barcodes file path, /barcodes/barcodes in this case> -o .<output files file path, /samples in this case> 
 -c -q -r --renz_1 ecoRI** --renz_2 mseI**
 
@@ -71,6 +71,10 @@ cd <working directory filepath, PROW_reads in this case>
 **make sure you set your restriction enzymes to the ones used in your particular case
 
 
+
+###### for Tyler specifically, copy/paste this script to terminal to demultiplex libraries
+/gpfs_fs/hohensteinta/stacks-2/gpfs_fs/hohensteinta/stacks-2.54/process_radtags -p ./unzipped -b 
+./barcodes/barcodes -o ./samples -c -q -r --renz_1 ecoRI --renz_2 mseI
  
 
 
