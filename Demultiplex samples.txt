@@ -46,9 +46,6 @@
 # log in to open node
 qrsh
 
-# Set gcc to version 7 (which supports c++11 compiling which Stacks requires)
-source /opt/rh/devtoolset-7/enable
-
 # Add gcc 7.0 to path. Stacks requires a c++11 compatible compiler and older gcc versions are not c++11 compatible.
 source /opt/rh/devtoolset-7/enable
 
@@ -64,17 +61,12 @@ cd <working directory filepath, PROW_reads in this case>
 # De-multiplex fastq files and trim to 60bp using the process_radtags function in Stacks.
 <process_radtags file path*> -p .<raw reads file path, /unzipped in this case> -b 
 .<barcodes file path, /barcodes/barcodes in this case> -o .<output files file path, /samples in this case> 
--c -q -r --renz_1 ecoRI** --renz_2 mseI**
+-c -q -r --disable_rad_check
 
 *process_radtags filepath should be /gpfs_fs/<godel user>/stacks-2.54/process_radtags
 
-**make sure you set your restriction enzymes to the ones used in your particular case
-
-
-
 ###### for Tyler specifically, copy/paste this script to terminal to demultiplex libraries
-/gpfs_fs/hohensteinta/stacks-2/gpfs_fs/hohensteinta/stacks-2.54/process_radtags -p ./unzipped -b 
-./barcodes/barcodes -o ./samples -c -q -r --renz_1 ecoRI --renz_2 mseI
+/gpfs_fs/hohensteinta/stacks-2.54/process_radtags -p ./unzipped -b ./barcodes/barcodes -o ./samples -y fastq -c -q -r --disable_rad_check
  
 
 
