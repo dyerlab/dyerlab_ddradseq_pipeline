@@ -61,12 +61,14 @@ cd <working directory filepath, PROW_reads in this case>
 # De-multiplex fastq files and trim to 60bp using the process_radtags function in Stacks.
 <process_radtags file path*> -p .<raw reads file path, /unzipped in this case> -b 
 .<barcodes file path, /barcodes/barcodes in this case> -o .<output files file path, /samples in this case> 
--c -q -r --disable_rad_check
+-t <fragment trim length, I used 60 in this case but use discretion based on fastQC results> -y <output file type, I used 
+fastq in this case> -c -q -r --disable_rad_check
 
-*process_radtags filepath should be /gpfs_fs/<godel user>/stacks-2.54/process_radtags
+*process_radtags filepath should be /gpfs_fs/<godel user>/stacks-2.54/process_radtags, if you have your stacks directory added 
+*to you your path then just input process_radtags
 
 ###### for Tyler specifically, copy/paste this script to terminal to demultiplex libraries
-/gpfs_fs/hohensteinta/stacks-2.54/process_radtags -p ./unzipped -b ./barcodes/barcodes -o ./samples -y fastq -c -q -r --disable_rad_check
+/gpfs_fs/hohensteinta/stacks-2.54/process_radtags -p ./unzipped -b ./barcodes/barcodes -o ./samples -t 60 -y fastq -c -q -r --disable_rad_check
  
 
 
