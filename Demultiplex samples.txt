@@ -5,11 +5,21 @@
 
 ### Connect to Godel with ssh client.
 
-### Download stacks and upload to server using sftp client https://catchenlab.life.illinois.edu/stacks/manual/
+### Download stacks and upload to server using your sftp client https://catchenlab.life.illinois.edu/stacks/manual/,
+### upload it to your bin directory for your user. if you have not made a bin directory for your local programs yet,
+### you can make one with the following script:
+
+cd ~
+mkdir bin
+
+### Going forward you should install all your local programs necessary for this pipeline in your bin directory.
+
+### Do the same for FastQC.  Download here https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc,
+### upload zipped file to your bin directory using sftp client.
 
 ### Upload multiplexed raw reads files and barcode file to server using sftp client.  Put them all raw reads files in the 
 ### same directory and create separate directories for the barcode file and your output files.  Put put all three directories 
-### in the same master directory, in this example the directory will be named PROW_reads
+### in the same master directory, in this example the directory will be named PROW_reads.
 
 #				In this example I use raw, samples, and barcodes as the respective directory names for the raw read, output,
 #				and barcode files.
@@ -43,32 +53,52 @@
 
 
 
-# log in to open node
+# Log in to open node.
 qrsh
 
-# Add gcc 7.0 to path. Stacks requires a c++11 compatible compiler and older gcc versions are not c++11 compatible.
+# Add JDK 8 to path.  FastQC requires JDK 8 to run (this must be done again every time you login to Godel and would like to run fastqc).
+source /usr/global/jdk8/enable_java.sh
+
+# Install fastqc.
+cd bin
+unzip fastqc_v0.11.9.zip
+cd ~
+
+#Add fastqc to path (this must be done again every time you login to Godel and would like to run fastqc).
+export PATH="/gpfs_fs/<Username>/bin/FastQC:$PATH"
+
+# Add gcc 7.0 to path. Stacks requires a c++11 compatible compiler and older gcc versions are not c++11 compatible
+#(this must be done again every time you log in to Godel and would like to run stacks).
 source /opt/rh/devtoolset-7/enable
 
-# Install Stacks
+# Install Stacks.
+cd bin
 tar xfvz stacks-2.54.tar.gz
 cd stacks-2.54
 source ./configure
 make
+cd ~
 
-# Set working directory
-cd <working directory filepath, PROW_reads in this case>
+# Add Stacks to path (this must be done again every time you log in to Godel and would like to run stacks).
+export PATH="/gpfs_fs/<Username>/bin/stacks-2.54:$PATH"
+
+# Run fastqc for fastq libraries.
+#				Navigate to your raw directory:
+				cd /gpfs_fs/<Username>/<data set>/raw
+
+# 				If libraries have not been unzipped:
+				fastqc *.fastq.gz
+				
+# 				If libraries have been unzipped:
+				fastqc *.fastq
 
 # De-multiplex fastq files and trim to 60bp using the process_radtags function in Stacks.
-<process_radtags file path*> -p .<raw reads file path, /unzipped in this case> -b 
-.<barcodes file path, /barcodes/barcodes in this case> -o .<output files file path, /samples in this case> 
+process_radtags -p .<raw reads file path, /PROW_reads/raw in this case> -b 
+.<barcodes file path, /PROW_reads/barcodes/barcodes in this case> -o .<output files file path, /PROW_reads/samples in this case> 
 -t <fragment trim length, I used 60 in this case but use discretion based on fastQC results> -y <output file type, I used 
 fastq in this case> -c -q -r --disable_rad_check
 
-*process_radtags filepath should be /gpfs_fs/<godel user>/stacks-2.54/process_radtags, if you have your stacks directory added 
-*to you your path then just input process_radtags
-
-###### for Tyler specifically, copy/paste this script to terminal to demultiplex libraries
-/gpfs_fs/hohensteinta/stacks-2.54/process_radtags -p ./unzipped -b ./barcodes/barcodes -o ./samples -t 60 -y fastq -c -q -r --disable_rad_check
- 
 
 
+# Using the example user inputs given above, my script to run the process_radtags program is as follows:
+process_radtags -p ./PROW_reads/raw -b ./PROW_reads/barcodes/barcodes -o ./PROW_reads/samples -t 60 -y fastq -c -q -r --disable_rad_check
