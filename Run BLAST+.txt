@@ -1,2 +1,0 @@
-#add BLAST+ to path
-export PATH="/gpfs_fs/tools/ncbi-blast-2.7.1+:$PATH"
