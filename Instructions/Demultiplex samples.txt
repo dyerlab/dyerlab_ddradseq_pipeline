@@ -101,4 +101,4 @@ fastq in this case> -c -q -r --disable_rad_check
 
 
 # Using the example user inputs given above, my script to run the process_radtags program is as follows:
-process_radtags -p ./PROW_reads/raw -b ./PROW_reads/barcodes/barcodes -o ./PROW_reads/samples -t 60 -y fastq -c -q -r --disable_rad_check
+process_radtags -p ./PROW_reads/test/raw -b ./PROW_reads/barcodes/PROW_barcodes_DeSaix -o ./PROW_reads/test/samples -t 60 -y fastq -c -q -r --disable_rad_check
