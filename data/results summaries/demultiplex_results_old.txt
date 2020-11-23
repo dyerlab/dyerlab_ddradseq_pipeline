@@ -1,5 +1,0 @@
-1208411120 total sequences
- 768660037 barcode not found drops (63.6%)
-    125069 low quality read drops (0.0%)
- 335993354 RAD cutsite not found drops (27.8%)
- 103632660 retained reads (8.6%)
