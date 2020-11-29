@@ -7,6 +7,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -44,6 +51,9 @@
       <workItem from="1606173789309" duration="4081000" />
       <workItem from="1606198016211" duration="1030000" />
       <workItem from="1606200250673" duration="2005000" />
+      <workItem from="1606680392269" duration="2166000" />
+      <workItem from="1606684168579" duration="19000" />
+      <workItem from="1606685566807" duration="5223000" />
     </task>
     <servers />
   </component>
@@ -55,5 +65,9 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606199013475" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1606682891514">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1606682891514" />
   </component>
 </project>
