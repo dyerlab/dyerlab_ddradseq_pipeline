@@ -56,7 +56,8 @@ mkdir bin
 # Log in to open node.
 qrsh
 
-# Add JDK 8 to path.  FastQC requires JDK 8 to run (this must be done again every time you login to Godel and would like to run fastqc).
+# Add JDK 8 to path.  FastQC requires JDK 8 to run (this must be done again every time you login to Godel and would like to run fastqc, 
+# the same goes for any other directory added to the path using the export command).
 source /usr/global/jdk8/enable_java.sh
 
 # Install fastqc.
@@ -64,8 +65,34 @@ cd bin
 unzip fastqc_v0.11.9.zip
 cd ~
 
-#Add fastqc to path (this must be done again every time you login to Godel and would like to run fastqc).
+# Add fastqc to path
 export PATH="/gpfs_fs/<Username>/bin/FastQC:$PATH"
+
+
+
+# Run fix_seqs_'library file name'.py on libraries to identify reads with complementary barcodes
+
+# Create directory for python programs (e.g. pythonPrograms) in user directory
+# Edit fix_seqs_example.py found in github directory to fit your specific library files
+# Upload edited fix_seqs.py files to pythonPrograms directory on server
+# Run each edited fix_seqs_'library file name'.py file:
+# e.g.:
+python fix_seqs_PL1.py
+python fix_seqs_PL2.py
+python_fix_seqs_PL3.py
+
+# I tried to figure out how to automate running this program on the whole library directory via qsub submission, but I couldn't get
+# it to work.  The example text file for the qsub submission as well as the fix_seqs.py file are in the github directory as fix_seq.sh
+# and fix_seqs.py if you would like to try to get it to work yourself.
+
+
+
+#set current working directory to library directory (e.g. /gpfs_fs/hohensteinta/PROW_reads)
+cd PROW_reads
+
+run fix_seq.py script to be entered here when I figure it out
+
+
 
 # Add gcc 7.0 to path. Stacks requires a c++11 compatible compiler and older gcc versions are not c++11 compatible
 #(this must be done again every time you log in to Godel and would like to run stacks).
