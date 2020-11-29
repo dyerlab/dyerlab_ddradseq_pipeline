@@ -1,10 +1,10 @@
 #fix_seqs.py
 
 from sys import argv
-from re import search, sub
+from re import sub
 def main():
 
-  fastqfile = open(argv[1])
+  fastqfile = open(argv[1], 'r')
   barcodefile = open(argv[2],'r')
 # except:
 #  print 'Usage: python fix_seqs.py fastqfile.fq barcode.txt output.fastq'
