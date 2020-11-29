@@ -1,5 +1,5 @@
 #! /bin/bash
-## $1= PROW_reads
+## $1= /gpfs_fs/hohensteinta/PROW_reads
 ## $2 = /gpfs_fs/hohensteinta/PROW_reads;
 ######################################################                                                                         
 #  execute script in set directory                                                                                         
