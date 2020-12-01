@@ -27,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Tyler-s-Garbage-Python-Programs/Hohenstein_HW5_2.py" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,6 +54,8 @@
       <workItem from="1606680392269" duration="2166000" />
       <workItem from="1606684168579" duration="19000" />
       <workItem from="1606685566807" duration="5223000" />
+      <workItem from="1606697832868" duration="3487000" />
+      <workItem from="1606846740520" duration="2648000" />
     </task>
     <servers />
   </component>
@@ -61,10 +63,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1606199013475">
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1606706676234">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606199013475" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1606706676234" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1606682891514">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
