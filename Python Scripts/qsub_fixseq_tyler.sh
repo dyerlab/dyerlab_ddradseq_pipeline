@@ -1,6 +1,6 @@
 #! /bin/bash
-## $1= /raw
-## $2 = /barcodes;
+## $1= /gpfs_fs/hohensteinta/PROW_reads/raw
+## $2 = /gpfs_fs/hohensteinta/PROW_reads/barcodes;
 ######################################################                                                                         
 #  execute script in current working directory                                                                                         
 #$ -cwd                                                                                                                       
@@ -24,9 +24,9 @@
 
 #for f in /gpfs_fs/hohensteinta/PROW_reads/raw/*.fastq;
 #do 
-sample="$(echo $1 | cut -d '/' -f 5,5 | cut -d '.' -f 1,1)"
+sample="$(echo $2 | cut -d '/' -f 5,5 | cut -d '.' -f 1,1)"
 echo $sample
-python3 ~/pythonPrograms/fix_seqs_Tyler.py $2 ./PROW_barcodes ''$1'/'$sample'_f.fastq'
+python /gpfs_fs/hohensteinta/PROW_reads/raw/fix_seqs_Tyler.py $2 ./PROW_barcodes '/gpfs_fs/hohensteinta/PROW_reads/'$1'raw/'$sample'_f.fastq'
 echo "Done filtering $sample raw reads $(date)"
 
 
