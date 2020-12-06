@@ -1,0 +1,419 @@
+denovo_map.pl version 2.54 started at 2020-12-06 13:54:01
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/denovo_map.pl -d --samples /gpfs_fs/hohensteinta/PROW_reads/test/samples --popmap /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -M 5
+
+ustacks
+==========
+
+Sample 1 of 96 'A_1'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_1.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 1 -M 5
+
+Sample 2 of 96 'A_2'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_2.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 2 -M 5
+
+Sample 3 of 96 'A_3'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_3.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 3 -M 5
+
+Sample 4 of 96 'A_4'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_4.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 4 -M 5
+
+Sample 5 of 96 'A_5'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_5.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 5 -M 5
+
+Sample 6 of 96 'A_6'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_6.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 6 -M 5
+
+Sample 7 of 96 'A_7'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_7.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 7 -M 5
+
+Sample 8 of 96 'A_8'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_8.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 8 -M 5
+
+Sample 9 of 96 'A_9'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_9.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 9 -M 5
+
+Sample 10 of 96 'A_10'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_10.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 10 -M 5
+
+Sample 11 of 96 'A_11'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_11.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 11 -M 5
+
+Sample 12 of 96 'A_12'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/A_12.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 12 -M 5
+
+Sample 13 of 96 'B_1'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_1.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 13 -M 5
+
+Sample 14 of 96 'B_2'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_2.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 14 -M 5
+
+Sample 15 of 96 'B_3'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_3.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 15 -M 5
+
+Sample 16 of 96 'B_4'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_4.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 16 -M 5
+
+Sample 17 of 96 'B_5'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_5.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 17 -M 5
+
+Sample 18 of 96 'B_6'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_6.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 18 -M 5
+
+Sample 19 of 96 'B_7'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_7.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 19 -M 5
+
+Sample 20 of 96 'B_8'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_8.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 20 -M 5
+
+Sample 21 of 96 'B_9'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_9.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 21 -M 5
+
+Sample 22 of 96 'B_10'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_10.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 22 -M 5
+
+Sample 23 of 96 'B_11'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_11.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 23 -M 5
+
+Sample 24 of 96 'B_12'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/B_12.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 24 -M 5
+
+Sample 25 of 96 'C_1'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_1.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 25 -M 5
+
+Sample 26 of 96 'C_2'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_2.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 26 -M 5
+
+Sample 27 of 96 'C_3'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_3.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 27 -M 5
+
+Sample 28 of 96 'C_4'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_4.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 28 -M 5
+
+Sample 29 of 96 'C_5'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_5.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 29 -M 5
+
+Sample 30 of 96 'C_6'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_6.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 30 -M 5
+
+Sample 31 of 96 'C_7'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_7.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 31 -M 5
+
+Sample 32 of 96 'C_8'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_8.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 32 -M 5
+
+Sample 33 of 96 'C_9'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_9.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 33 -M 5
+
+Sample 34 of 96 'C_10'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_10.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 34 -M 5
+
+Sample 35 of 96 'C_11'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_11.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 35 -M 5
+
+Sample 36 of 96 'C_12'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/C_12.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 36 -M 5
+
+Sample 37 of 96 'D_1'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_1.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 37 -M 5
+
+Sample 38 of 96 'D_2'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_2.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 38 -M 5
+
+Sample 39 of 96 'D_3'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_3.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 39 -M 5
+
+Sample 40 of 96 'D_4'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_4.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 40 -M 5
+
+Sample 41 of 96 'D_5'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_5.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 41 -M 5
+
+Sample 42 of 96 'D_6'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_6.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 42 -M 5
+
+Sample 43 of 96 'D_7'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_7.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 43 -M 5
+
+Sample 44 of 96 'D_8'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_8.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 44 -M 5
+
+Sample 45 of 96 'D_9'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_9.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 45 -M 5
+
+Sample 46 of 96 'D_10'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_10.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 46 -M 5
+
+Sample 47 of 96 'D_11'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_11.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 47 -M 5
+
+Sample 48 of 96 'D_12'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/D_12.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 48 -M 5
+
+Sample 49 of 96 'E_1'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_1.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 49 -M 5
+
+Sample 50 of 96 'E_2'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_2.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 50 -M 5
+
+Sample 51 of 96 'E_3'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_3.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 51 -M 5
+
+Sample 52 of 96 'E_4'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_4.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 52 -M 5
+
+Sample 53 of 96 'E_5'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_5.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 53 -M 5
+
+Sample 54 of 96 'E_6'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_6.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 54 -M 5
+
+Sample 55 of 96 'E_7'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_7.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 55 -M 5
+
+Sample 56 of 96 'E_8'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_8.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 56 -M 5
+
+Sample 57 of 96 'E_9'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_9.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 57 -M 5
+
+Sample 58 of 96 'E_10'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_10.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 58 -M 5
+
+Sample 59 of 96 'E_11'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_11.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 59 -M 5
+
+Sample 60 of 96 'E_12'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/E_12.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 60 -M 5
+
+Sample 61 of 96 'F_1'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_1.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 61 -M 5
+
+Sample 62 of 96 'F_2'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_2.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 62 -M 5
+
+Sample 63 of 96 'F_3'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_3.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 63 -M 5
+
+Sample 64 of 96 'F_4'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_4.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 64 -M 5
+
+Sample 65 of 96 'F_5'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_5.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 65 -M 5
+
+Sample 66 of 96 'F_6'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_6.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 66 -M 5
+
+Sample 67 of 96 'F_7'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_7.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 67 -M 5
+
+Sample 68 of 96 'F_8'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_8.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 68 -M 5
+
+Sample 69 of 96 'F_9'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_9.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 69 -M 5
+
+Sample 70 of 96 'F_10'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_10.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 70 -M 5
+
+Sample 71 of 96 'F_11'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_11.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 71 -M 5
+
+Sample 72 of 96 'F_12'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/F_12.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 72 -M 5
+
+Sample 73 of 96 'G_1'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_1.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 73 -M 5
+
+Sample 74 of 96 'G_2'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_2.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 74 -M 5
+
+Sample 75 of 96 'G_3'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_3.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 75 -M 5
+
+Sample 76 of 96 'G_4'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_4.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 76 -M 5
+
+Sample 77 of 96 'G_5'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_5.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 77 -M 5
+
+Sample 78 of 96 'G_6'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_6.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 78 -M 5
+
+Sample 79 of 96 'G_7'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_7.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 79 -M 5
+
+Sample 80 of 96 'G_8'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_8.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 80 -M 5
+
+Sample 81 of 96 'G_9'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_9.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 81 -M 5
+
+Sample 82 of 96 'G_10'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_10.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 82 -M 5
+
+Sample 83 of 96 'G_11'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_11.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 83 -M 5
+
+Sample 84 of 96 'G_12'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/G_12.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 84 -M 5
+
+Sample 85 of 96 'H_1'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_1.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 85 -M 5
+
+Sample 86 of 96 'H_2'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_2.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 86 -M 5
+
+Sample 87 of 96 'H_3'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_3.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 87 -M 5
+
+Sample 88 of 96 'H_4'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_4.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 88 -M 5
+
+Sample 89 of 96 'H_5'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_5.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 89 -M 5
+
+Sample 90 of 96 'H_6'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_6.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 90 -M 5
+
+Sample 91 of 96 'H_7'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_7.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 91 -M 5
+
+Sample 92 of 96 'H_8'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_8.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 92 -M 5
+
+Sample 93 of 96 'H_9'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_9.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 93 -M 5
+
+Sample 94 of 96 'H_10'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_10.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 94 -M 5
+
+Sample 95 of 96 'H_11'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_11.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 95 -M 5
+
+Sample 96 of 96 'H_12'
+----------
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/ustacks -t fastq -f /gpfs_fs/hohensteinta/PROW_reads/test/samples/H_12.fq -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -i 96 -M 5
+
+Depths of Coverage for Processed Samples:
+
+cstacks
+==========
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/cstacks -M /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map -n 5 -P /gpfs_fs/hohensteinta/PROW_reads/SNPs
+
+
+sstacks
+==========
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/sstacks -P /gpfs_fs/hohensteinta/PROW_reads/SNPs -M /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map
+
+
+tsv2bam
+==========
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/tsv2bam -P /gpfs_fs/hohensteinta/PROW_reads/SNPs  -M /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map
+
+
+gstacks
+==========
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/gstacks -P /gpfs_fs/hohensteinta/PROW_reads/SNPs -M /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map
+
+
+populations
+==========
+/gpfs_fs/hohensteinta/bin/stacks-2.54/bin/populations -P /gpfs_fs/hohensteinta/PROW_reads/SNPs -M /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map
+
+denovo_map.pl is done.
+
+denovo_map.pl completed at 2020-12-06 13:54:01
