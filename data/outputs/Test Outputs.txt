@@ -1,0 +1,5 @@
+Demultiplexed PROW libraries test output:
+	https://drive.google.com/drive/folders/1PhjwbDNElh58Yoav1cTPx9ae0KyP0b10?usp=sharing
+
+PROW SNPs test output:
+	https://drive.google.com/drive/folders/1gsDeRFlVg8MargZjxBuI_u5RkpndKWaf?usp=sharing
