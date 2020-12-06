@@ -120,12 +120,12 @@ export PATH="/gpfs_fs/<Username>/bin/stacks-2.54:$PATH"
 				fastqc *.fastq
 
 # De-multiplex fastq files and trim to 60bp using the process_radtags function in Stacks.
-process_radtags -p .<raw reads file path, /PROW_reads/raw in this case> -b 
-.<barcodes file path, /PROW_reads/barcodes/barcodes in this case> -o .<output files file path, /PROW_reads/samples in this case> 
+process_radtags -p <raw reads file path, /PROW_reads/raw in this case> -b 
+<barcodes file path, /PROW_reads/barcodes/barcodes in this case> -o <output files file path, /PROW_reads/samples in this case> 
 -t <fragment trim length, I used 60 in this case but use discretion based on fastQC results> -y <output file type, I used 
 fastq in this case> -c -q -r --disable_rad_check
 
 
 
-# Using the example user inputs given above, my script to run the process_radtags program is as follows:
-process_radtags -p ./PROW_reads/test/raw -b ./PROW_reads/barcodes/PROW_barcodes_DeSaix -o ./PROW_reads/test/samples -t 60 -y fastq -c -q -r --disable_rad_check
+# Using the example user inputs given above, my script to run a test of the process_radtags program is as follows:
+process_radtags -p ~/PROW_reads/test/raw -b ~/PROW_reads/barcodes/PROW_barcodes -o ~/PROW_reads/test/samples -t 60 -y fastq -c -q -r --disable_rad_check
