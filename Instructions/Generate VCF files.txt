@@ -7,17 +7,6 @@
 # <~~~~~>: place holder for user input, text between brackets gives instructions as to what the input should be
 # *: footnote, further clarification written in a note below this line of script
 
-
-
-# Unzip GATK.
-unzip gatk-4.1.9.0.zip
-
-# Add GATK directory to path.
-export PATH="/gpfs_fs/<Username>/bin/gatk-4.1.9.0:$PATH"
-
-# Add JDK8 to path, GATK requires JDK8 to run and the default version of Java on Godel is 1.6:
-source /usr/global/jdk8/enable_java.sh
-
 # Create output directory in your data set directory for .vcf file, SNPs in this case.
 cd <data set directory, PROW_reads in this case>
 mkdir SNPs
@@ -27,8 +16,4 @@ cd ~
 # for the denovo_map.pl program, before running you need to edit the denovo_map.pl program in a text editor and replace "_BINDIR_" 
 # with your stacks file path.  See the example denovo_map.pl file in the pipeline github directory for clarification.
 
-denovo_map.pl -d --samples /gpfs_fs/hohensteinta/PROW_reads/samples --popmap /gpfs_fs/hohensteinta/PROW_reads/barcodes/pop_map  
--o /gpfs_fs/hohensteinta/PROW_reads/SNPs -M 5
-
-
-
+denovo_map.pl --samples /gpfs_fs/hohensteinta/PROW_reads/test/samples --popmap /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map -o /gpfs_fs/hohensteinta/PROW_reads/test/SNPs -M 5
