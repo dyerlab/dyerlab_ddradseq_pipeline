@@ -56,6 +56,8 @@
       <workItem from="1606685566807" duration="5223000" />
       <workItem from="1606697832868" duration="3487000" />
       <workItem from="1606846740520" duration="2648000" />
+      <workItem from="1607320207643" duration="427000" />
+      <workItem from="1607321201371" duration="407000" />
     </task>
     <servers />
   </component>
@@ -63,6 +65,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="363" y="104" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607320269824">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="363" y="104" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.738@0.0.1366.738" timestamp="1607320269824" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1606706676234">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
