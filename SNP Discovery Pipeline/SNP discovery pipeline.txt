@@ -1,0 +1,170 @@
+### Create Godel Cluster account at https://chipc.vcu.edu/research/account-creation/
+
+### Instructions for connecting to Godel should be included in the email to your VCU email when your
+### account is created.
+
+### Connect to Godel with ssh client.
+
+### Download stacks, FASTQC, and VCFtools and upload to server using your sftp client https://catchenlab.life.illinois.edu/stacks/manual/, 
+### https://www.bioinformatics.babraham.ac.uk/projects/fastqc/, https://vcftools.github.io/man_latest.html
+### and upload them to your bin directory for your user.  If you have not made a bin directory for your local programs yet,
+### you can make one with the following script:
+
+cd ~
+mkdir bin
+
+### Going forward you should install all your local programs necessary for this pipeline in your bin directory.
+
+### Do the same for FastQC.  Download here https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc,
+### upload zipped file to your bin directory using sftp client.
+
+### Upload multiplexed raw reads files and barcode file to server using sftp client.  Put them all raw reads files in the 
+### same directory and create separate directories for the barcode file, your de-multiplexed output files, and your SNP data.
+### Put all three directories in the same master directory, in this example the directory will be named PROW_reads.
+### Create subdirectories within your output directory for the outputs from each of your respective pooled libraries.
+
+#				In this example I use raw, samples, and barcodes as the respective directory names for the raw read, output,
+#				and barcode files.
+
+#				Make sure that the barcode file format matches the format used by the process_radtags function in Stacks, a tab delimited
+#				file consisting of the barcodes in the first column and sample name in the second.  If you need to edit the barcode file you
+#				can do so in Excel.  Save the new edited barcode file as a tab delimited text file and then rename the file to remove the .txt
+#				file extension before uploading to server.
+
+#				ex:
+#				AACGCCAAC	30_05
+#				TCGCGACCAAC	10_11
+#				TCTGGCAAC	32_07
+#				GTTGGCCAAC	18_09
+#				CCAGAACCAAC	17_09
+#				CGGTCCAAC	04_07
+#				AGGTACCAAC	31_11
+#				AGGTAACCAAC	30_07
+#				CTCAGCAAC	26_09
+#				TGAAGCCAAC	32_09
+
+
+
+
+
+##### Script
+
+# key:
+# <~~~~~>: place holder for user input, text between brackets gives instructions as to what the input should be
+# *: footnote, further clarification written in a note below this line of script
+
+
+
+# Log in to open node.
+qrsh
+
+# Add JDK 8 to path.  FastQC requires JDK 8 to run (this must be done again every time you login to Godel and would like to run fastqc, 
+# the same goes for any other directory added to the path using the export command).
+source /usr/global/jdk8/enable_java.sh
+
+# Install fastqc.
+cd bin
+unzip fastqc_v0.11.9.zip
+cd ~
+
+# Add fastqc to path
+export PATH="/gpfs_fs/<Username>/bin/FastQC:$PATH"
+
+
+
+# Add gcc 7.0 to path. Stacks requires a c++11 compatible compiler and older gcc versions are not c++11 compatible
+#(this must be done again every time you log in to Godel and would like to run stacks).
+source /opt/rh/devtoolset-7/enable
+
+
+
+# Install Stacks.
+cd bin
+tar xfvz stacks-2.54.tar.gz
+cd stacks-2.54
+./configure --prefix=/gpfs_fs/<Username>/bin/stacks-2.54
+make
+cd ~
+
+# Add Stacks to path (this must be done again every time you log in to Godel and would like to run stacks).
+export PATH="/gpfs_fs/<Username>/bin/stacks-2.54:$PATH"
+export PATH="/gpfs_fs/<Username>/bin/stacks-2.54/bin:$PATH"
+
+
+
+# Install VCFtools
+# Rename zipped VCFtools file to vcftools-v0.X.XX.tar (or .gz, or .tar.gz or whatever type of zip file extension it has).
+cd bin
+# unzip to match file extension (e.g. tar -xzvf vcfools-v0.X.XX.tar.gz)
+export PERL5LIB=/path/to/your/vcftools-directory/src/perl/
+cd vcftools-v0.X.XX /
+./configure --prefix=/gpfs_fs/<Username>/bin/vcftools-v0.X.XX
+make
+make install
+
+# Add VCFtools to path (this must be done again every time you log in to Godel and would like to run VCFtools).
+export PATH="/gpfs_fs/<Username>/bin/vcftools-v0.X.XX/bin:$PATH"
+
+
+
+# Run fastqc for fastq libraries.
+#				Navigate to your raw directory:
+				cd /gpfs_fs/<Username>/<data set>/raw
+
+# 				If libraries have not been unzipped:
+				fastqc *.fastq.gz
+				
+# 				If libraries have been unzipped:
+				fastqc *.fastq
+
+
+
+#set current working directory to library directory (e.g. /gpfs_fs/hohensteinta/PROW_reads)
+cd PROW_reads
+
+# Run fix_seqs_'library file name'.py on libraries, this pulls 
+
+# Create directory for python programs (e.g. pythonPrograms) in user directory
+# Edit fix_seqs_example.py found in github directory to fit your specific library files
+# Upload edited fix_seqs.py files to pythonPrograms directory on server
+# Run each edited fix_seqs_'library file name'.py file:
+# e.g.:
+python fix_seqs_PL1.py
+python fix_seqs_PL2.py
+python fix_seqs_PL3.py
+
+# I tried to figure out how to automate running this program on the whole library directory via qsub submission, but I couldn't get
+# it to work.  The example text file for the qsub submission as well as the fix_seqs.py file are in the github directory as fix_seq.sh
+# and fix_seqs.py if you would like to try to get it to work yourself.
+
+# fix_seq.py qsub wrapper script to be entered here when I figure it out
+
+
+
+# De-multiplex fastq files and trim to 40bp using the process_radtags function in Stacks.  Run script for each pooled library.
+process_radtags -f <pooled library file path, ~/PROW_reads/raw/PL1.fastq in this case> -b <barcodes file path, ~/PROW_reads/barcodes/barcodes in this case> -o <output files file path, ~/PROW_reads/samples/PL1 in this case> -t <fragment trim length, I used 40 in this case but use discretion based on fastQC results> -y <output file type, I used fastq in this case> -c -q -r --disable_rad_check
+
+
+
+# Using the example user inputs given above, my script to run the process_radtags program for my test library is as follows:
+process_radtags -f ~/PROW_reads/test/raw/PL1head.fastq -b ~/PROW_reads/barcodes/PROW_barcodes -o ~/PROW_reads/samples/PL1head -t 40 -y fastq -c -q -r --disable_rad_check
+
+
+
+# Upload population map to your barcodes directory using your sftp client.  Instructions on how to create your population map file can be found on the Stacks
+# website (http://catchenlab.life.illinois.edu/stacks/comp/denovo_map.php).
+
+# Pool all your sample libraries from each pooled library into the same directory (/gpfs_fs/hohensteinta/PROW_reads/SNPs/PROW) in this case.
+# Label your sample files beforehand so that you know which pooled library they came from.
+
+# Call SNPs using denovo_map.p1 program in stacks.  There is a problem in installing stacks where the path is not properly configured
+# for the denovo_map.pl program, before running you need to edit the denovo_map.pl program in a text editor and replace "_BINDIR_" 
+# with your stacks file path.  See the example denovo_map.pl file in the pipeline github directory for clarification.
+
+#Script used to produce SNP data from test file
+denovo_map.pl --samples /gpfs_fs/hohensteinta/PROW_reads/samples/PL1head --popmap /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map -o /gpfs_fs/hohensteinta/PROW_reads/SNPs/PL1head -X "populations: --min-maf 0.01 --vcf"
+
+
+
+# Run VCFtools on test data
+vcftools --vcf /gpfs_fs/hohensteinta/PROW_reads/SNPs/PL1head/populations.snps.vcf --012 --maf 0.01 --min-alleles 2 --max-alleles 2 --max-missing 0.5 --min-meanDP 3 --minQ 20
