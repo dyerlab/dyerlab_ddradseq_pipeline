@@ -1,0 +1,12 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /gpfs_fs/hohensteinta/PROW_reads/SNPs/PL1head/populations.snps.vcf
+	--012
+
+After filtering, kept 96 out of 96 Individuals
+Writing 012 matrix files ... Done.
+After filtering, kept 242 out of a possible 242 Sites
+Run Time = 1.00 seconds
