@@ -1,0 +1,11 @@
+PASS	Basic Statistics	PL3.fastq
+FAIL	Per base sequence quality	PL3.fastq
+PASS	Per tile sequence quality	PL3.fastq
+FAIL	Per sequence quality scores	PL3.fastq
+FAIL	Per base sequence content	PL3.fastq
+WARN	Per sequence GC content	PL3.fastq
+PASS	Per base N content	PL3.fastq
+PASS	Sequence Length Distribution	PL3.fastq
+FAIL	Sequence Duplication Levels	PL3.fastq
+WARN	Overrepresented sequences	PL3.fastq
+PASS	Adapter Content	PL3.fastq
