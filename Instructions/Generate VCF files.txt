@@ -1,6 +1,3 @@
-### Download the latest versio of GATK from the Broad Institute (https://github.com/broadinstitute/gatk/releases), 
-### and upload the zipped file to your bin directory using your sftp client.
-
 ##### Script
 
 # key:
@@ -12,8 +9,11 @@ cd <data set directory, PROW_reads in this case>
 mkdir SNPs
 cd ~
 
+# Upload population map to your barcodes directory using your sftp client.  Instructions on how to create your population map file can be found on the Stacks
+# website (http://catchenlab.life.illinois.edu/stacks/comp/denovo_map.php).
+
 # Call SNPs using denovo_map.p1 program in stacks.  There is a problem in installing stacks where the path is not properly configured
 # for the denovo_map.pl program, before running you need to edit the denovo_map.pl program in a text editor and replace "_BINDIR_" 
 # with your stacks file path.  See the example denovo_map.pl file in the pipeline github directory for clarification.
 
-denovo_map.pl --samples /gpfs_fs/hohensteinta/PROW_reads/test/samples --popmap /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map -o /gpfs_fs/hohensteinta/PROW_reads/test/SNPs -M 5
+denovo_map.pl --samples /gpfs_fs/hohensteinta/PROW_reads/samples --popmap /gpfs_fs/hohensteinta/PROW_reads/barcodes/PROW_pop_map -o /gpfs_fs/hohensteinta/PROW_reads/SNPs -M 5
