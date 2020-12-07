@@ -18,14 +18,15 @@ mkdir bin
 ### upload zipped file to your bin directory using sftp client.
 
 ### Upload multiplexed raw reads files and barcode file to server using sftp client.  Put them all raw reads files in the 
-### same directory and create separate directories for the barcode file and your output files.  Put put all three directories 
-### in the same master directory, in this example the directory will be named PROW_reads.
+### same directory and create separate directories for the barcode file, your de-multiplexed output files, and your SNP data.
+### Put all three directories in the same master directory, in this example the directory will be named PROW_reads.
+### Create subdirectories within your output directory for the outputs from each of your respective pooled libraries.
 
 #				In this example I use raw, samples, and barcodes as the respective directory names for the raw read, output,
 #				and barcode files.
 
 #				Make sure that the barcode file format matches the format used by the process_radtags function in Stacks, a tab delimited
-#				file consistin of the barcodes in the first column and sample name in the second.  If you need to edit the barcode file you
+#				file consisting of the barcodes in the first column and sample name in the second.  If you need to edit the barcode file you
 #				can do so in Excel.  Save the new edited barcode file as a tab delimited text file and then rename the file to remove the .txt
 #				file extension before uploading to server.
 
@@ -70,7 +71,41 @@ export PATH="/gpfs_fs/<Username>/bin/FastQC:$PATH"
 
 
 
-# Run fix_seqs_'library file name'.py on libraries to identify reads with complementary barcodes
+# Add gcc 7.0 to path. Stacks requires a c++11 compatible compiler and older gcc versions are not c++11 compatible
+#(this must be done again every time you log in to Godel and would like to run stacks).
+source /opt/rh/devtoolset-7/enable
+
+
+
+# Install Stacks.
+cd bin
+tar xfvz stacks-2.54.tar.gz
+cd stacks-2.54
+./configure --prefix=/gpfs_fs/<Username>/bin/stacks-2.54
+make
+cd ~
+
+# Add Stacks to path (this must be done again every time you log in to Godel and would like to run stacks).
+export PATH="/gpfs_fs/<Username>/bin/stacks-2.54:$PATH"
+
+
+
+# Run fastqc for fastq libraries.
+#				Navigate to your raw directory:
+				cd /gpfs_fs/<Username>/<data set>/raw
+
+# 				If libraries have not been unzipped:
+				fastqc *.fastq.gz
+				
+# 				If libraries have been unzipped:
+				fastqc *.fastq
+
+
+
+#set current working directory to library directory (e.g. /gpfs_fs/hohensteinta/PROW_reads)
+cd PROW_reads
+
+# Run fix_seqs_'library file name'.py on libraries, this pulls 
 
 # Create directory for python programs (e.g. pythonPrograms) in user directory
 # Edit fix_seqs_example.py found in github directory to fit your specific library files
@@ -85,47 +120,14 @@ python_fix_seqs_PL3.py
 # it to work.  The example text file for the qsub submission as well as the fix_seqs.py file are in the github directory as fix_seq.sh
 # and fix_seqs.py if you would like to try to get it to work yourself.
 
-
-
-#set current working directory to library directory (e.g. /gpfs_fs/hohensteinta/PROW_reads)
-cd PROW_reads
-
-run fix_seq.py script to be entered here when I figure it out
+# fix_seq.py qsub wrapper script to be entered here when I figure it out
 
 
 
-# Add gcc 7.0 to path. Stacks requires a c++11 compatible compiler and older gcc versions are not c++11 compatible
-#(this must be done again every time you log in to Godel and would like to run stacks).
-source /opt/rh/devtoolset-7/enable
-
-# Install Stacks.
-cd bin
-tar xfvz stacks-2.54.tar.gz
-cd stacks-2.54
-./configure --prefix=/gpfs_fs/<Username>/bin/stacks-2.54
-make
-cd ~
-
-# Add Stacks to path (this must be done again every time you log in to Godel and would like to run stacks).
-export PATH="/gpfs_fs/<Username>/bin/stacks-2.54:$PATH"
-
-# Run fastqc for fastq libraries.
-#				Navigate to your raw directory:
-				cd /gpfs_fs/<Username>/<data set>/raw
-
-# 				If libraries have not been unzipped:
-				fastqc *.fastq.gz
-				
-# 				If libraries have been unzipped:
-				fastqc *.fastq
-
-# De-multiplex fastq files and trim to 60bp using the process_radtags function in Stacks.
-process_radtags -p <raw reads file path, /PROW_reads/raw in this case> -b 
-<barcodes file path, /PROW_reads/barcodes/barcodes in this case> -o <output files file path, /PROW_reads/samples in this case> 
--t <fragment trim length, I used 60 in this case but use discretion based on fastQC results> -y <output file type, I used 
-fastq in this case> -c -q -r --disable_rad_check
+# De-multiplex fastq files and trim to 40bp using the process_radtags function in Stacks.
+process_radtags -f <pooled library file path, ~/PROW_reads/raw/PL1.fastq in this case> -b <barcodes file path, ~/PROW_reads/barcodes/barcodes in this case> -o <output files file path, ~/PROW_reads/samples/PL1 in this case> -t <fragment trim length, I used 40 in this case but use discretion based on fastQC results> -y <output file type, I used fastq in this case> -c -q -r --disable_rad_check
 
 
 
-# Using the example user inputs given above, my script to run a test of the process_radtags program is as follows:
-process_radtags -p ~/PROW_reads/raw -b ~/PROW_reads/barcodes/PROW_barcodes -o ~/PROW_reads/samples -t 60 -y fastq -c -q -r --disable_rad_check
+# Using the example user inputs given above, my script to run the process_radtags program for my test library is as follows:
+process_radtags -f ~/PROW_reads/test/raw/PL1head.fastq -b ~/PROW_reads/barcodes/PROW_barcodes -o ~/PROW_reads/samples/PL1head -t 40 -y fastq -c -q -r --disable_rad_check
